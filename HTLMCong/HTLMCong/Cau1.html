@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giỏ Hàng</title>
+	<meta charset="utf-8">
+	<style>
+		#wrapper{
+			width: 100%;
+			margin: auto;
+		}
+		#left{
+
+			width: 67%;
+			height: 220px;
+			background-color: white;
+			float: left;
+		}
+		#right{
+			
+			width: 30%;
+			height: 150px;
+			background-color: white;
+			float: right;
+		}
+		#img1{
+			width: 13% ;
+			height: 13%;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 30px;
+			float: left;
+		}
+		#img2{
+			width: 10% ;
+			height: 10%;
+		}
+		#right2{
+			width: 25%;
+			height: 200px;
+			background-color: white;
+			float: right;
+		}
+		#left1{
+			width: 30%;
+			height: 200px;
+			background-color: white;
+			float: left;
+		}
+		#left2{
+			width: 25%;
+			height: 200px;
+			background-color: white;
+			float: left;
+		}
+		button{
+			width: 25px;
+		}
+		h3{
+			padding-bottom: -10px;
+		}
+
+	</style>
+</head>
+<body style="background-color: #e5e7ea;">
+<div style="line-height: 200%">GIỎ HÀNG <small style="color: #7e8082;">(1 sản phẩm)</small></div>
+<div id="wrapper">
+	<div id="left">
+		<div><img id="img1" src="img/nxbtrestoryfull_02052014_030554_1.jpg"></div>
+		<div id="left1">
+		<div><h3>Khi lỗi thuộc về những vì sao</h3></div>
+		<img id="img2" src="img/k12503248.jpg">
+		<div style="line-height: 150%">
+		<div>Bìa Mềm - Tác giả: <span style="color: #1093e5;">John Green</span></div>
+		<div>Sách có thể đọc bằng <span style="color: #1093e5;">BookCare</span></div>
+		<div>Cung cấp bởi <span style="color: #1093e5;">TIKI.VN</span></div>
+		<div><span style="color: #1093e5;">Xóa &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Để dành mua sau</span></div>
+		</div>
+		</div>
+		<div id="left2">
+			<div style="float: right;">
+				<div><h3>74.000 đ</h3></div>
+				<div><del style="color: #b0b2b2">105.000 đ</del></div>
+				<div><button disabled style="background-color: orange; width: 50px;">-30%</button></div>
+			</div>
+		</div>
+		<div id="right2">
+		<div style="text-align: center;"><h3><button onclick="minusFnc()">-</button><input type="text" id="slg" value="0" style=" width: 20px;"><button onclick="plusFnc()">+</button></h3></div>
+		
+		</div>
+	</div>
+
+	<div id="right">
+		<div style="height: 50px;"><div style="float: left; padding-top: 10px;padding-left: 20px;">Tạm tính :</div><div style="text-align: right;padding-top: 10px;padding-right: 15px;">74.000 <u>đ</u></div></div>
+		<hr>
+		<div style="height: 50px;"><div style="float: left;padding-top: 10px;padding-left: 20px;">Thành tiền:</div> <div style=" font-size: 200%; color: red; text-align: right;padding-top: 10px; padding-right: 15px;">74.000<u>đ</u></div>
+		<div style="float: right; padding-right: 15px;">(Đã bao gồm VAT)</div></div>
+	</div>
+	<div style="padding-top: 170px;">
+	<button style="width: 30%;height: 50px;background-color: white;border: 2px solid red;float: right;">Tiến hành đặt hàng</button>
+	</div>
+</div>	
+
+</body>
+<script>
+var slg =0;
+function plusFnc(){
+	slg++;
+	document.getElementById("slg").value=slg;
+
+}
+function minusFnc(){
+	var slg1=document.getElementById("slg").value;
+			if(slg1!=0)
+			{
+				slg1--;
+				document.getElementById("slg").value=slg1;
+			}
+
+}
+</script>
+</html>

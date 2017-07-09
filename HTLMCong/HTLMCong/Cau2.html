@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		#wrapper{
+			width: 100%;
+			margin: auto;
+		}
+		#right{
+			
+			width: 29%;
+			height: 300px;
+			background-color: white;
+			float: right;
+		}
+		#left{
+
+			width: 70%;
+			background-color: white;
+			float: left;
+		}
+		div.tab {
+		    float: left;
+		    border: 1px solid #ccc;
+		    background-color: #f1f1f1;
+		    width: 30%;
+		    height: 500px;
+		}
+
+		/* Style the buttons inside the tab */
+		div.tab button {
+		    display: block;
+		    background-color: inherit;
+		    color: black;
+		    padding: 22px 16px;
+		    width: 100%;
+		    border: none;
+		    outline: none;
+		    text-align: left;
+		    cursor: pointer;
+		    transition: 0.3s;
+		    font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		div.tab button:hover {
+		    background-color: #ddd;
+		    border-left: 4px solid blue;
+		}
+
+		/* Create an active/current "tab button" class */
+		div.tab button.active {
+		    background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		    float: left;
+		    padding: 0px 12px;
+		    border: 1px solid #ccc;
+		    width: 67%;
+		    border-left: none;
+		    height: 500px;
+		}
+	</style>
+</head>
+<body style="background-color: #e5e7ea;">
+<div style="padding-top: 10px;"><b>1. Khách hàng mới / Đăng nhập</b></div>
+<div id="wrapper">
+<br>
+<div style="text-align: center;">Thanh toán đơn hàng chỉ trong một bước với</div>
+<br>
+<div style="text-align: center;"><a href="https://www.facebook.com/"><input type="image" src="img/facebook.jpg"></a> Hoặc <a href="https://accounts.google.com"><input type="image" src="img/google.jpg"></a> Hoặc <a href="https://twitter.com/"><input type="image" src="img/twitter.jpg"></div></a>
+<br>
+<div id="left">
+	<div class="tab">
+  <button class="tablinks" onclick="action(event, 'login')" id="defaultOpen"><ul style="list-style-type: none;float: right;"><li style="float: right;">ĐĂNG NHẬP</li><br><li>(Đã là thành viên)</li></ul></button>
+  <button class="tablinks" onclick="action(event, 'register')"><ul style="list-style-type: none;float: right;"><li style="float: right;">TẠO TÀI KHOẢN</li><br><li>(Dành cho khách hàng mới)</li></ul></button>
+</div>
+
+<div id="login" class="tabcontent">
+<form method="get" action ="Cau2b.html">
+  <div style="padding-left: 30px; font-size: 130%; line-height: 80%;">
+  	<p style="font-weight: bold;">Email</p>
+  	<input type="email" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Nhập email" style="width: 500px; height: 30px;">
+  	<p style="font-weight: bold;">Mật khẩu</p>
+  	<input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" placeholder="Nhập mật khẩu yêu cầu bao gồm chữ,số,kí tự đặc biệt và tối thiểu 8 kí tự" required style="width: 500px; height: 30px;" >
+  	<p style="font-size: 80%;">Quên mật khẩu? Khôi phục mật khẩu <a style="text-decoration: none;" href="#">tại đây</a></p>
+  <input  type ="submit"  value="Đăng nhập" style="width: 500px; height: 30px;color: white; background-color: #00B6F0;">
+  </div>
+  </form>
+</div>
+
+<div id="register" class="tabcontent">
+  <form >
+  <div style="padding-left: 30px; font-size: 130%; line-height: 80%;">
+  	<p style="font-weight: bold;">Email</p>
+  	<input type="email" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Nhập email" style="width: 500px; height: 30px;">
+  	<p style="font-weight: bold;">Mật khẩu</p>
+  	<input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$" placeholder="Nhập mật khẩu yêu cầu bao gồm chữ,số,kí tự đặc biệt và tối thiểu 8 kí tự" required style="width: 500px; height: 30px;" >
+  	<p style="font-weight: bold;">Họ tên</p>
+  	<input type="text" pattern = "/^[a-zA-Z\s]*$/" required placeholder="Nhập họ tên" style="width: 500px; height: 30px;">
+  	<p style="font-size: 80%; line-height: 150%">Khi bạn nhấn đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <a style="text-decoration: none;" href="#">điều khoản và sử dụng và chính sách của chúng tôi</a></p>
+  	<input  type ="submit" value="Đăng ký" style="width: 500px; height: 50px;color: white; background-color: #FDD835;">
+  </div>
+  </form>
+</div>
+</div>
+<div id="right">
+	<div style="height: 50px;"><div style="float: left; padding-top: 10px;padding-left: 20px;">Đơn hàng (1 sản phẩm) :</div><div style="text-align: right;padding-top: 10px;padding-right: 15px;"><button style="height: 30px; width: 50px;">Sửa</button></div></div>
+		<hr>
+	<div style="height: 50px;"><div style="float: left; padding-top: 10px;padding-left: 20px;">Tạm tính :</div><div style="text-align: right;padding-top: 10px;padding-right: 15px;">74.000 <u>đ</u></div></div>
+		<hr>
+	<div style="height: 50px;"><div style="float: left; padding-top: 10px;padding-left: 20px;width:50%;"><b>1x </b><a style="text-decoration: none" href="#">Khi lỗi thuộc về những vì sao</a></div><div style="text-align: right;padding-top: 10px;padding-right: 15px;">74.000 <u>đ</u></div></div>
+		<hr>
+		<div style="height: 50px;"><div style="float: left;padding-top: 10px;padding-left: 20px;">Thành tiền:</div> <div style=" font-size: 200%; color: red; text-align: right;padding-top: 10px; padding-right: 15px;">74.000<u>đ</u></div>
+		<div style="float: right; padding-right: 15px;">(Đã bao gồm VAT)</div></div>
+</div>
+</div>
+<script>
+function action(evt, act) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(act).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
